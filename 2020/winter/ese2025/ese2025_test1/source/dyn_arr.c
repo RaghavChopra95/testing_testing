@@ -66,9 +66,10 @@ int comparo_grade(const void *pA, const void *pB)
 	stuDA_t student_B = *((stuDA_t*) pB);
         
 	// get student grades
-	int gGrade_A = student_A.data.grade;
-	int gGrade_B = student_B.data.grade;
-	return (gGrade_A - gGrade_B);
+	float gGrade_A = student_A.data.grade;
+        float gGrade_B = student_B.data.grade;
+	int gGrade_diff = (int)(gGrade_A - gGrade_B);
+	return gGrade_diff;
 }
 
 /*
